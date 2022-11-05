@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="container">
+    <div class="cards">
+      <div class="front-card">
+        <img src="./images/card-logo.svg">
+        <div class="bottom-front-card">
+          <h1><span id="num1">0000</span> <span id="num2">0000</span> <span id="num3">0000</span> <span id="num4">0000</span></h1>
+          <div class="card-holder">
+            <p id="cardHolder">JANE APPLESEED</p>
+            <p ><span id="expMese">00</span>/<span id="expYeare">00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <img src="./images/bg-card-back.png">
+        <span id="cvvInner">000</span>
+      </div>
+    </div>
+    <div class="payment-methode">
+        <div class="input-container" id="payment">
+          <div class="inputs">
+            <h6>CARDHOLDER NAME</h6>
+            <input type="text" placeholder="e.g. Jane Appleseed" id="holder">
+          </div>
+          <div class="inputs">
+            <h6>CARD NUMBER </h6>
+            <input type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" pattern="[0-9]+" id="cc" autocomplete="off" oninput="cardNumbers()">
+          </div>
+          <div class="card-details">
+            <div class="input-1">
+              <h6>EXP. DATE (MM/YY)</h6>
+              <div class="card-exp"> 
+                <input type="text" placeholder="MM" id="expM" maxlength="2">
+                <input type="text" placeholder="YY" id="expY" maxlength="2">
+              </div>
+            </div>
+            <div class="input-2">
+              <h6>CVC</h6>
+              <input type="text" placeholder="e.g. 123" id="cvv" maxlength="3">
+            </div>
+        </div>
+        <div class="btn-conferm">
+          <button id="btnSend">Confirm</button>
+        </div>
+        </div>
+        <div class="success-container" id="success" style="display:none;">
+            <div class="success-child">
+              <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+              <h2>THANK YOU!</h2>
+              <p>We've added your card details</p>
+              <button>Continue</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</main>
+  <!-- Completed state start -->
+
+</body>
+<script src="./main.js"></script>
+</html>
